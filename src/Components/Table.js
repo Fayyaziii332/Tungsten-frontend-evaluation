@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Popconfirm, Tag } from 'antd';
+import { Table, Popconfirm, Tag, Button } from 'antd';
 
 const { Column, ColumnGroup } = Table;
 
@@ -24,7 +24,7 @@ const UserTable = ({ users, handleDelete }) => {
           title="First Name" 
           dataIndex="firstName" 
           key="firstName"
-          render={(text) => <a>{text}</a>}
+          render={(text) => <p id='name-label'>{text}</p>}
         />
         <Column align='center' title="Last Name" dataIndex="lastName" key="lastName" />
       </ColumnGroup>
@@ -48,7 +48,7 @@ const UserTable = ({ users, handleDelete }) => {
         width="10%"
         render={(_, record) => users.length >= 1 ?
           (<Popconfirm title="Are you sure to delete? " onConfirm={() => handleDelete(record.key)}>
-            <a className="delete-btn">Delete</a>
+            <Button type="link" className="delete-btn">Delete</Button>
           </Popconfirm>)
           : null
         }
