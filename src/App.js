@@ -13,7 +13,7 @@ const App = () => {
         className="page-header"
         title="TFE"
         avatar={{ src: 'logo.jpeg' }}
-        subTitle="This page is for evaluation task"
+        subTitle="This page is for Learning"
       />
       <MainContent />
       <Footer className="page-footer"><Text>Developed by @fayyaz</Text></Footer>
